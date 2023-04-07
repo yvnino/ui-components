@@ -4,6 +4,9 @@ import { Theme } from '@mui/material/styles'
 
 import { BaseProps, CompoundedComponentWithRef } from '../../types'
 import styles from './styles'
+import Header from './PageHeader'
+import Content from './PageContent'
+import Footer from './PageFooter'
 
 export type ViewportWidthType = 'wide' | 'full'
 
@@ -42,4 +45,8 @@ const Page = forwardRef<HTMLElement, Props>(function Page(props) {
   )
 }) as CompoundedComponentWithRef<Props, HTMLElement>
 
-export default Page
+export default Object.assign(Page, {
+  Header,
+  Content,
+  Footer
+})

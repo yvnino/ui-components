@@ -13,5 +13,9 @@ export interface Props extends BaseProps, HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
 }
 export declare const PageContext: React.Context<PageContextProps>;
-declare const Page: React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLElement>>;
-export default Page;
+declare const _default: React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLElement>> & {
+    Header: (props: import("./PageHeader").Props) => JSX.Element;
+    Content: (props: import("./PageContent").Props) => JSX.Element;
+    Footer: (props: import("./PageFooter").Props) => JSX.Element;
+};
+export default _default;

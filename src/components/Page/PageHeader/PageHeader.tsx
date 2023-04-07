@@ -34,7 +34,7 @@ const useStyles = makeStyles(styles, {
 })
 
 // eslint-disable-next-line complexity
-const PageHeader: React.FC<Props> = (props) => {
+const PageHeader = (props: Props) => {
   const classes = useStyles(props)
   const {
     rightContent,
