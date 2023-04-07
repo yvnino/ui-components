@@ -45,22 +45,23 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "path": "^0.12.7",
     "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vite-plugin-dts": "^2.2.0"
   },
   "files": [
-      "dist"
+    "dist"
   ],
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-        "import": "./dist/my-lib.es.js",
-        "require": "./dist/my-lib.umd.js"
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
-  }
+    }
   }
 }

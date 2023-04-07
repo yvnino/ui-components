@@ -1,7 +1,14 @@
 const { resolve } = require('path')
 const { defineConfig } = require('vite')
+const dts = require('vite-plugin-dts')
+
 
 module.exports = defineConfig({
+  plugins: [
+    dts({
+        insertTypesEntry: true,
+    }),
+  ],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
