@@ -17,3 +17,7 @@ export { default as BreadCrumb } from './BreadCrumb'
 export { default as Accordion } from './Accordion'
 export { default as Page } from './Page'
 export { default as TreeView } from './TreeView'
+
+export * from './form'
+export * from './inputs'
+export * from './Icons'

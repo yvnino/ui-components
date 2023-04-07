@@ -9,7 +9,7 @@ export interface Props {
   direction?: GridProps['direction']
 }
 
-export const LabelWrapper = (
+const LabelWrapper = (
   {
     children,
     direction = 'column',

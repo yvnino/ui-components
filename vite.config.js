@@ -8,7 +8,8 @@ module.exports = defineConfig({
       entry: resolve('./', 'src/index.ts'),
       name: 'MyLib',
       // the proper extensions will be added
-      fileName: 'my-lib',
+      formats: ['es', 'umd'],
+      fileName: (format) => `my-lib.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

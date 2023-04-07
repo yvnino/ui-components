@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "rm -rf ./dist && tsc && vite build",
     "preview": "vite preview",
     "start": "start-storybook -p 6006",
     "typecheck": "tsc --noEmit",
     "build-sb": "build-storybook -o build/storybook --quiet"
   },
+  "sideEffects": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -45,5 +46,21 @@
     "path": "^0.12.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
+  },
+  "files": [
+      "dist"
+  ],
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+        "import": "./dist/my-lib.es.js",
+        "require": "./dist/my-lib.umd.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+  }
   }
 }
