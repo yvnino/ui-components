@@ -1,1 +1,1 @@
-export { default } from './WidgetErrorBoundary'
+export { default } from './ErrorBoundary'
