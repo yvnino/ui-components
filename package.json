@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf ./dist && tsc && vite build",
+    "build:patch": "yarn build && yarn version --patch",
+    "build:minor": "yarn build && yarn version --minor",
+    "build:major": "yarn build && yarn version --major",
     "preview": "vite preview",
     "start": "start-storybook -p 6006",
     "typecheck": "tsc --noEmit",
