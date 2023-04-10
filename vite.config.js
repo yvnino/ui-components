@@ -15,25 +15,19 @@ module.exports = defineConfig({
       entry: resolve('./', 'src/index.ts'),
       name: 'MyLib',
       // the proper extensions will be added
-      formats: ['es'],
-      fileName: (format, entry) => `${entry}.${format}.js`,
+      formats: ['es', 'umd'],
+      fileName: (format) => `my-lib.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
       external: ['react'],
-      input: {
-        'main': resolve('./', 'src/index.ts'),
-        'form': './src/components/form/index.ts',
-        'icons': './src/components/Icons/index.ts'
-      },
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
           react: 'react',
         },
-        inlineDynamicImports: false
       },
     },
   },
