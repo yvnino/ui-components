@@ -1,6 +1,6 @@
 export { default as AppShell } from './AppShell'
 export { default as ThemeProvider } from './ThemeProvider'
-export { default as DarkModeProvider } from './DarkModeProvider'
+export { default as DarkModeProvider, useDarkModeContext } from './DarkModeProvider'
 export { default as Button } from './Button'
 export { default as Typography } from './Typography'
 export { default as TypographyOverflow } from './TypographyOverflow'
