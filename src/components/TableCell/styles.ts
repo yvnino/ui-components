@@ -23,17 +23,14 @@ export default () =>
     root: regularCellStyles,
     header: {
       fontWeight: 'bold',
-      color: palette.text.primary,
       lineHeight: '1.125rem'
     },
     body: {
       fontSize: '13px',
       fontWeight: 'normal',
-      color: palette.text.primary
     },
     footer: {
       fontSize: '13px',
       fontWeight: 'bold',
-      color: palette.common.black
     }
   })

@@ -76,26 +76,18 @@ const ExampleSort = ({ variant }: { variant?: Props['variant']}) => {
     <Table.Body>
       {
         stableSort(SORT_DATA).map((val: any) => (
-        <Table.Row key={val + '_test'}>
+        <Table.Row key={val.id + '_test'}>
           <Table.Cell colSpan={2}>
-            <Typography>
             {val.name}
-            </Typography>
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            <Typography>
             {val.id}
-            </Typography>
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            <Typography>
             {val.role}
-            </Typography>
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            <Typography>
             {val.team}
-            </Typography>
           </Table.Cell>
         </Table.Row>
         ))
@@ -131,16 +123,16 @@ const Example = ({ variant }: { variant?: Props['variant']}) => {
         [0, 1, 2, 3].map((val) => (
         <Table.Row key={val + '_test'}>
           <Table.Cell colSpan={2}>
-            Test 1 body
+              Test 1 body
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            Test 2 body
+              Test 2 body
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            Test 3 body
+              Test 3 body
           </Table.Cell>
           <Table.Cell colSpan={2}>
-            Test 4 body
+              Test 4 body
           </Table.Cell>
         </Table.Row>
         ))
