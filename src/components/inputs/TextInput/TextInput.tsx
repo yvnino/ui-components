@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { makeStyles } from '@mui/styles'
 import TextField, { TextFieldProps } from '@mui/material/TextField'
 
@@ -12,7 +12,10 @@ export type Props = TextFieldProps & {
   onlyBottomBorder?: boolean
 }
 
-const TextInput = ({ label, labelProps, onlyBottomBorder, variant = 'outlined', ...rest }: Props) => {
+const TextInput = forwardRef<HTMLInputElement, Props>(function TextInput(props, ref) {
+  const {
+    label, labelProps, onlyBottomBorder, variant = 'outlined', ...rest
+  } = props
   const classes = useStyles()
 
   return (
@@ -20,6 +23,7 @@ const TextInput = ({ label, labelProps, onlyBottomBorder, variant = 'outlined', 
       <TextField
         variant={variant}
         {...rest}
+        ref={ref}
         FormHelperTextProps={{
           ...(rest.FormHelperTextProps || {}),
           className: classes.helper
@@ -35,6 +39,6 @@ const TextInput = ({ label, labelProps, onlyBottomBorder, variant = 'outlined', 
       />
     </LabelWrapper>
   )
-}
+})
 
 export default TextInput

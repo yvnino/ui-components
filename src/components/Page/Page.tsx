@@ -29,13 +29,14 @@ const useStyles = makeStyles<Theme, Props>(styles, {
   name: 'Page'
 })
 
-const Page = forwardRef<HTMLElement, Props>(function Page(props) {
+const Page = forwardRef<HTMLDivElement, Props>(function Page(props, ref) {
   const classes = useStyles(props)
   const { children, width, ...rest } = props
 
   return (
     <div
-      {...rest}
+    {...rest}
+    ref={ref}
       className={classes.root}
     >
       <PageContext.Provider value={{ width }}>
