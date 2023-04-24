@@ -19,14 +19,14 @@ export type Props = BaseInputProps & {
   type?: string
 }
 
-export const Input = (props: Props) => {
+export const Input = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const { meta, input } = useField(props.name)
 
   return (
     <FormField error={meta.error || meta.submitError}>
-      <BaseInput variant='outlined' {...input} {...props} />
+      <BaseInput variant='outlined' {...input} {...props} ref={ref} />
     </FormField>
   )
-}
+})
 
 export default Input
