@@ -22,7 +22,7 @@ const INIT = {
   date: new Date('2023-12-10'),
   switchTest: false,
   time: {
-    hour: 12,
+    hour: 13,
     min: 30
   },
 }
