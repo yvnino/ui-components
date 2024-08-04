@@ -20,7 +20,11 @@ const INIT = {
   radio: undefined,
   checkboxTest: false,
   date: new Date('2023-12-10'),
-  switchTest: false
+  switchTest: false,
+  time: {
+    hour: 12,
+    min: 30
+  },
 }
 
 const SELECT_OPTIONS = [

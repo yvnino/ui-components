@@ -25,9 +25,11 @@ export const TimePicker = (props: Props) => {
     props.onChange?.(val)
   }
 
+  const value = dayjs().hour(input.value?.hour).minute(input.value?.min)
+
   return (
     <FormField error={error}>
-      <BaseTimePicker {...props} onChange={handleOnChange} />
+      <BaseTimePicker {...props} value={value} onChange={handleOnChange} />
     </FormField>
   )
 }

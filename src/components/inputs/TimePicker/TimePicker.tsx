@@ -7,14 +7,12 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 
 const BaseTimePicker = (props: TimePickerProps<Dayjs, any>) => {
   const [value, setValue] = useState<Dayjs | null>(
-    dayjs(props.defaultValue),
+    dayjs(props.value),
   )
 
   const handleChange = (newValue: Dayjs | null) => {
     setValue(newValue)
   }
-
-  console.log('BaseTimePicker===props.value', props.value)
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
