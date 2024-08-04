@@ -7,13 +7,13 @@ type Option<T extends string | number = string | number> = {
     text: string;
     value: T;
 };
-export interface Props extends SelectProps {
+export type Props = SelectProps & {
     options: Option[];
     placeholder?: string;
     errMsg?: string;
     labelProps?: LabelProps;
     label?: React.ReactNode;
     textInputProps?: InputBaseProps;
-}
+};
 declare const Select: ({ options, placeholder, errMsg, labelProps, textInputProps, ...rest }: Props) => JSX.Element;
 export default Select;

@@ -10,7 +10,8 @@ import {
   FormSelect,
   FormDatePicker,
   FormSubmitButton,
-  FormSwitch
+  FormSwitch,
+  FormTimePicker,
 } from './'
 
 const INIT = {
@@ -88,6 +89,7 @@ const TestForm = () => {
         <br />
         <FormDatePicker name='date' label='Date Picker' />
         <br />
+        <FormTimePicker name='time' label='Time Picker' />
         <FormSubmitButton>
           Submit
         </FormSubmitButton>

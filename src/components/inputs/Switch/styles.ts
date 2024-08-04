@@ -52,7 +52,7 @@ export const Switch = (theme: Theme) => createStyles({
     // border: `1px solid ${theme.palette.grey[400]}`,
     backgroundColor: '#d7d7db',
     opacity: 1,
-    transition: theme.transitions.create(['background-color', 'border']),
+    transition: theme?.transitions?.create(['background-color', 'border']),
   },
   checked: {},
   focusVisible: {},

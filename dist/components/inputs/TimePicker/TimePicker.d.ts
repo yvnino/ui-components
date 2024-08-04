@@ -1,8 +1,5 @@
 /// <reference types="react" />
-export interface TimePickerProps {
-    date?: Date;
-    value?: string;
-    onChange?: (val: string) => void;
-}
-declare const TimePicker: ({ value, onChange }: TimePickerProps) => JSX.Element;
-export default TimePicker;
+import { Dayjs } from 'dayjs';
+import { TimePickerProps } from '@mui/x-date-pickers/TimePicker';
+declare const BaseTimePicker: (props: TimePickerProps<Dayjs, any>) => JSX.Element;
+export default BaseTimePicker;

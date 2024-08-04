@@ -5,16 +5,7 @@ import {
 } from 'react-final-form'
 import { FormApi, ValidationErrors, getIn, setIn, SubmissionErrors } from 'final-form'
 
-// import Input from './Input'
-// import Select from './Select'
-// import RadioButton from './RadioButton'
-// import RadioGroup from './RadioGroup'
-// import Checkbox from './Checkbox'
-// import SubmitButton from './SubmitButton'
-// import Autocomplete from './Autocomplete'
-// import DatePicker from './DatePicker'
 import BaseForm from './Base'
-// import Switch from './Switch'
 import {
   FormContext,
   Validators,
@@ -99,15 +90,5 @@ export const Form = <T extends AnyObject = AnyObject>(props: Props<T>) => {
     </FormContext.Provider>
   )
 }
-
-// Form.Input = Input
-// Form.Select = Select
-// Form.RadioButton = RadioButton
-// Form.RadioGroup = RadioGroup
-// Form.Checkbox = Checkbox
-// Form.SubmitButton = SubmitButton
-// Form.Autocomplete = Autocomplete
-// Form.DatePicker = DatePicker
-// Form.Switch = Switch
 
 export default Form

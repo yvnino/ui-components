@@ -14,7 +14,7 @@ type Option<T extends string | number = string | number> = {
   value: T
 }
 
-export interface Props extends SelectProps {
+export type Props = SelectProps & {
   options: Option[]
   placeholder?: string
   errMsg?: string
