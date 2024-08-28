@@ -31,8 +31,8 @@ export default ({ transitions }: Theme) =>
       background: `${colors.grey.lightest} !important`
     },
     hover: {
-      transition: transitions.create('background-color', {
-        duration: transitions.duration.shortest
+      transition: transitions?.create('background-color', {
+        duration: transitions?.duration.shortest
       })
     },
     selected: {}

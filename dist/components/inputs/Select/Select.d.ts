@@ -14,6 +14,7 @@ export type Props = SelectProps & {
     labelProps?: LabelProps;
     label?: React.ReactNode;
     textInputProps?: InputBaseProps;
+    emptyValueText?: string;
 };
-declare const Select: ({ options, placeholder, errMsg, labelProps, textInputProps, ...rest }: Props) => JSX.Element;
+declare const Select: ({ options, placeholder, errMsg, labelProps, textInputProps, emptyValueText, ...rest }: Props) => JSX.Element;
 export default Select;

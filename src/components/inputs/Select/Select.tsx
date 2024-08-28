@@ -21,12 +21,13 @@ export type Props = SelectProps & {
   labelProps?: LabelProps
   label?: React.ReactNode
   textInputProps?: InputBaseProps
+  emptyValueText?: string
 }
 
 const useStyles = makeStyles(S.Select)
 const StyledInput = withStyles(S.Input)(InputBase)
 
-const Select = ({ options, placeholder, errMsg, labelProps, textInputProps, ...rest }: Props) => {
+const Select = ({ options, placeholder, errMsg, labelProps, textInputProps, emptyValueText = 'None', ...rest }: Props) => {
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const handleClick = (ev: React.MouseEvent<HTMLElement>) => {
@@ -43,6 +44,7 @@ const Select = ({ options, placeholder, errMsg, labelProps, textInputProps, ...r
           className={classes.root}
           native
           onClick={handleClick}
+          displayEmpty
           input={<StyledInput {...textInputProps} />}
           MenuProps={{
             anchorOrigin: {
@@ -51,6 +53,9 @@ const Select = ({ options, placeholder, errMsg, labelProps, textInputProps, ...r
             }
           }}
         >
+          <option disabled value='' aria-label='None'>
+            <em>{emptyValueText}</em>
+          </option>
           {options.map((item, index) => {
             return <option key={index} value={item.value}>{item.text}</option>
           })}

@@ -33644,8 +33644,8 @@ const tue = f6, nue = ({ transitions: e }) => ({
     background: `${Er.grey.lightest} !important`
   },
   hover: {
-    transition: e.create("background-color", {
-      duration: e.duration.shortest
+    transition: e == null ? void 0 : e.create("background-color", {
+      duration: e == null ? void 0 : e.duration.shortest
     })
   },
   selected: {}
@@ -54741,18 +54741,19 @@ const mwe = ({
       borderColor: Er.grey.dark
     }
   }
-}, Lwe = Gn(Iwe), jwe = yy(Awe)(ES), Fwe = ({ options: e, placeholder: t, errMsg: n, labelProps: r, textInputProps: o, ...i }) => {
-  const u = Lwe(), [d, m] = B.useState(null), h = (g) => {
-    m(d ? null : g.currentTarget);
+}, Lwe = Gn(Iwe), jwe = yy(Awe)(ES), Fwe = ({ options: e, placeholder: t, errMsg: n, labelProps: r, textInputProps: o, emptyValueText: i = "None", ...u }) => {
+  const d = Lwe(), [m, h] = B.useState(null), g = (S) => {
+    h(m ? null : S.currentTarget);
   };
   return /* @__PURE__ */ B.createElement(RI, { direction: "column", ...r }, /* @__PURE__ */ B.createElement(TO, { style: { minWidth: "100%" }, component: "fieldset", error: !!n }, t && /* @__PURE__ */ B.createElement(rI, { id: "select-label" }, t), /* @__PURE__ */ B.createElement(
     dI,
     {
-      ...i,
+      ...u,
       id: "select",
-      className: u.root,
+      className: d.root,
       native: !0,
-      onClick: h,
+      onClick: g,
+      displayEmpty: !0,
       input: /* @__PURE__ */ B.createElement(jwe, { ...o }),
       MenuProps: {
         anchorOrigin: {
@@ -54761,7 +54762,8 @@ const mwe = ({
         }
       }
     },
-    e.map((g, S) => /* @__PURE__ */ B.createElement("option", { key: S, value: g.value }, g.text))
+    /* @__PURE__ */ B.createElement("option", { disabled: !0, value: "", "aria-label": "None" }, /* @__PURE__ */ B.createElement("em", null, i)),
+    e.map((S, x) => /* @__PURE__ */ B.createElement("option", { key: x, value: S.value }, S.text))
   )));
 }, Vwe = Fwe, Bwe = (e) => {
   const { meta: t, input: n } = ju(e.name), r = t.touched && (t.error || t.submitError);
