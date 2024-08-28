@@ -20,6 +20,7 @@ export { default as Page } from './Page';
 export { default as Sidebar } from './Sidebar';
 export { default as TreeView } from './TreeView';
 export { default as ErrorBoundary } from './ErrorBoundary';
+export { default as TableSortLabel } from '@mui/material/TableSortLabel';
 export { default as Container } from '@mui/material/Box';
 export { default as Divider } from '@mui/material/Divider';
 export { default as Link } from '@mui/material/Link';
