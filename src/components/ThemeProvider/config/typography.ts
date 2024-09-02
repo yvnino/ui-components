@@ -1,6 +1,6 @@
 const typography = {
   fontFamily: ['Nunito Sans', 'industryregular', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
-  fontSize: 16,
+  fontSize: 14,
   fontWeights: {
     thin: 100,
     light: 300,
