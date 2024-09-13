@@ -30,6 +30,7 @@ export { default as Grid } from '@mui/material/Grid'
 export { default as  Menu } from '@mui/material/Menu'
 export { default as  MenuItem } from '@mui/material/MenuItem'
 export { default as  Paper } from '@mui/material/Paper'
+export { default as  Fab } from '@mui/material/Fab'
 
 export * from './form'
 export * from './inputs'
