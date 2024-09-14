@@ -6,13 +6,14 @@ import {
 import DarkModeContext from './context/DarkModeContext'
 
 interface Props {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  initState?: boolean
 }
 
 const DarkModeProvider = ({
-  children
+  children, initState,
 }: Props) => {
-  const [isDarkMode, toggleDarkMode] = useState<boolean>(true)
+  const [isDarkMode, toggleDarkMode] = useState<boolean>(!!initState)
 
   return (
     <DarkModeContext.Provider

@@ -28994,16 +28994,17 @@ const Wae = ({
   const [t] = Hae();
   return /* @__PURE__ */ z.createElement(L3, { theme: t }, e);
 }, Yae = Wae, qae = ({
-  children: e
+  children: e,
+  initState: t
 }) => {
-  const [t, n] = $u(!0);
+  const [n, r] = $u(!!t);
   return /* @__PURE__ */ z.createElement(
     F3.Provider,
     {
       value: {
-        isDark: t,
-        setDarkMode: n,
-        mode: t ? "dark" : "light"
+        isDark: n,
+        setDarkMode: r,
+        mode: n ? "dark" : "light"
       }
     },
     e

@@ -1,6 +1,7 @@
 import React from 'react';
 interface Props {
     children?: React.ReactNode;
+    initState?: boolean;
 }
-declare const DarkModeProvider: ({ children }: Props) => JSX.Element;
+declare const DarkModeProvider: ({ children, initState, }: Props) => JSX.Element;
 export default DarkModeProvider;
