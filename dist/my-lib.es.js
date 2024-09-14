@@ -28606,8 +28606,9 @@ const oae = () => /* @__PURE__ */ z.createElement(c3, null), aae = oae, iae = ()
   const e = "width=device-width, user-scalable=no";
   return /* @__PURE__ */ z.createElement(vT, null, /* @__PURE__ */ z.createElement("meta", { name: "viewport", content: e }));
 }, sae = ({
-  children: e
-}) => /* @__PURE__ */ z.createElement(Gae, null, /* @__PURE__ */ z.createElement(kv, null, /* @__PURE__ */ z.createElement(Yae, null, /* @__PURE__ */ z.createElement(aae, null), /* @__PURE__ */ z.createElement(iae, null), /* @__PURE__ */ z.createElement(Tle, null, /* @__PURE__ */ z.createElement(yX, null, e))))), L2e = sae;
+  children: e,
+  darkModeInitState: t
+}) => /* @__PURE__ */ z.createElement(Gae, { initState: t }, /* @__PURE__ */ z.createElement(kv, null, /* @__PURE__ */ z.createElement(Yae, null, /* @__PURE__ */ z.createElement(aae, null), /* @__PURE__ */ z.createElement(iae, null), /* @__PURE__ */ z.createElement(Tle, null, /* @__PURE__ */ z.createElement(yX, null, e))))), L2e = sae;
 function Bl() {
   const e = rO(lO);
   return process.env.NODE_ENV !== "production" && M.useDebugValue(e), e[am] || e;

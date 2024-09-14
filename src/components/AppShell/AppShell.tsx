@@ -23,13 +23,15 @@ import { ThemeProvider, DarkModeProvider, NotificationsProvider } from '../'
   
   interface Props {
     children?: ReactNode
+    darkModeInitState?: boolean
   }
   
   const AppShell = ({
     children,
+    darkModeInitState,
   }: Props) => {
     return (
-      <DarkModeProvider>
+      <DarkModeProvider initState={darkModeInitState}>
         <HelmetProvider>
           <ThemeProvider>
             <CssBaseline />
