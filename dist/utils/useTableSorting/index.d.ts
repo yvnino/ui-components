@@ -5,5 +5,5 @@ interface UseTableSorting {
     stableSort: (array: any[]) => any;
 }
 type Order = 'asc' | 'desc';
-declare function useTableSorting(initOrder: string | number): UseTableSorting;
+declare function useTableSorting(initOrder: string | number, initDrderDirection?: Order): UseTableSorting;
 export default useTableSorting;

@@ -28,9 +28,8 @@ function getComparator<Key extends keyof any>(
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-
-function useTableSorting(initOrder: string | number): UseTableSorting {
-  const [order, setOrder] = useState<Order>('desc');
+function useTableSorting(initOrder: string | number, initDrderDirection?: Order): UseTableSorting {
+  const [order, setOrder] = useState<Order>(initDrderDirection || 'desc');
   const [orderBy, setOrderBy] = useState<string | number>(initOrder);
 
   const handleRequestSort = (property: string | number) => {
