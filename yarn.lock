@@ -3135,6 +3135,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-truncate@^2.3.7":
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/@types/react-truncate/-/react-truncate-2.3.7.tgz#8b394aa2548b5a5a6ee234972403a844451e8a4d"
+  integrity sha512-gWfw503eLA3Ewx+Imfq7ye1FAllkIhuor4hFQGuE4G3ZHUoc6CITqZerHN8VPBnc26O/MiaDhJKDW4WmBZovZA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.0.28":
   version "18.0.31"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.31.tgz#a69ef8dd7bfa849734d258c793a8fe343a338205"
@@ -9690,6 +9697,11 @@ react-transition-group@^4.4.5:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-truncate@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-truncate/-/react-truncate-2.4.0.tgz#3cf5ff09ab86f93e3c078d359f4de6d75aa60510"
+  integrity sha512-3QW11/COYwi6iPUaunUhl06DW5NJBJD1WkmxW5YxqqUu6kvP+msB3jfoLg8WRbu57JqgebjVW8Lknw6T5/QZdA==
 
 react@^18.2.0:
   version "18.2.0"
